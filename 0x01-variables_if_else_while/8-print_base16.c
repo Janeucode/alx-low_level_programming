@@ -11,5 +11,5 @@ int main(void)
 	for (i = '0'; i <= 'f'; i++)
 	putchar (i);
 	putchar ('\n');
-	return (0)
+	return (0);
 }

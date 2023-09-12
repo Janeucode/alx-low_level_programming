@@ -9,9 +9,9 @@ int main(void)
 {
 	int i;
 
-	for (i = '0'; i < 'd'; i++)
+	for (i = '0'; i < '100'; i++)
 		putchar(i);
-	if (i < 'c') {
+	if (i < '99') {
 		putchar(',');
 		putchar(' ');
 	}

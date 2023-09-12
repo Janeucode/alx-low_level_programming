@@ -8,8 +8,9 @@ int main(void)
 {
 	char i;
 
-	for (i = '0'; i <= 'f'; i++)
-	putchar (iX);
+	for (i = '0'; i <= '9'; i++)
+	for (i = 'a'; i <= 'f'; i++)
+	putchar (i);
 	putchar ('\n');
 	return (0);
 }

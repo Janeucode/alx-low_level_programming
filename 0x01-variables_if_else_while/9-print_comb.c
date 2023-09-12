@@ -11,9 +11,10 @@ int main(void)
 
 	for (i = '0'; i < 'd'; i++)
 		putchar(i);
-	if (i < 'c')
+	if (i < 'c') {
 		putchar(',');
 		putchar(' ');
+	}
 	putchar('\n');
 	return (0);
 }

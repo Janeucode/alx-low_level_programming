@@ -12,7 +12,8 @@ int main(void)
 	for (i = '0'; i < 'd'; i++)
 		putchar(i);
 	if (i < 'c')
-		putchar(', ');
-	putchar('\n')
+		putchar(',');
+		putchar(' ');
+	putchar('\n');
 	return (0);
 }

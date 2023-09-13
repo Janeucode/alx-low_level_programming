@@ -1,4 +1,4 @@
-int _putchar(void)
+int _pputchar(void)
 {
 	const char *message = "_putchar\n"; 
 	write(1, message, strlen(message));

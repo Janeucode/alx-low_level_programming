@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <string.hi>
+#include <string.h>
 #include <main.h>
 /**
  * main - Entry point

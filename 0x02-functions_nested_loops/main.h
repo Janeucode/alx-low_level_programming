@@ -1,3 +1,4 @@
+#include <string.h>
 int main(void)
 {
 	const char *message = "_putchar\n"; 

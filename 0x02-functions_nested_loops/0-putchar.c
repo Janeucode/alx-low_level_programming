@@ -9,5 +9,5 @@
 int main (void)
 {
 	_putchar();
-	return (o);
+	return (0);
 }

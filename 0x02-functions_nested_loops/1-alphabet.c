@@ -1,5 +1,6 @@
 #include "main.h"
-#include "string.h"
+#include <string.h>
+#include <unistd.h>
 /**
  * main - Entry point
  *
@@ -8,5 +9,5 @@
 int main(void)
 {
 	print_alphabet();
-	return (0);
+	return (void);
 }

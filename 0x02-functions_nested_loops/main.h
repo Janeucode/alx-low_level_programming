@@ -1,6 +1,6 @@
 int main(void)
 {
-        putchar('_putchar');
-        putchar('\n');
+	const char *message = "_putchar\n"; 
+	write(1, message, strlen(message))
         return (0);
 }

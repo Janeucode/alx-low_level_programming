@@ -1,5 +1,5 @@
 #include <string.h>
-int main(void)
+int _putchar(void)
 {
 	const char *message = "_putchar\n"; 
 	write(1, message, strlen(message));

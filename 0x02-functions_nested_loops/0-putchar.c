@@ -1,8 +1,13 @@
 #include <unistd.h>
-#include <string.h>
+#include <string.hi>
+#include <main.h>
 /**
  * main - Entry point
  *
  * Return: always 0 (success)
  */
-#include "main.h"
+int main (void)
+{
+	_putchar();
+	return (o);
+}

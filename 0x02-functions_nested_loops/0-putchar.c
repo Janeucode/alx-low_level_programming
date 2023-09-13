@@ -4,7 +4,4 @@
  *
  * Return: always 0 (success)
  */
-int main(void)
-{
-	#include "main.h"
-}
+#include "main.h"

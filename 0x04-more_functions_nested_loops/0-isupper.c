@@ -6,7 +6,7 @@
  */
 int _isupper(i)
 {
-	if (i = 'A' && i <= 'Z'; i++)
+	if (i >= 'A' && i <= 'Z'; i++)
 	{
 		return (1);
 	}
@@ -20,6 +20,11 @@ int _isupper(i)
 		return (2);
 	}
 }
+/**
+ * main - Entry point
+ *
+ * Return: always 0 (success)
+ */
 int main(void)
 {
 	_isupper();

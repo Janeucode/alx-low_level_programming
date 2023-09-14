@@ -9,8 +9,7 @@
  */
 int _print(void)
 {
-	const char *message = "_putchar\n";
-	
+	const char *message = "_putchar\n";i
 	write(1, message, strlen(message));
 	return (0);
 }
@@ -18,6 +17,6 @@ int _print(void)
 
 int main(void)
 {
-	_print();
+	print();
 	return (0);
 }

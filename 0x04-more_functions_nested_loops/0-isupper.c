@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * main - Entry point
+ * _isupper - this function checks if letters are in uper case
+ * @i: the character to be checked (ASCII value)
  *
- * Return: always 0 (success)
+ * Return: 1 if @i is uppercase, 0 if @i is lower case and 2 if it is neither.
  */
-int _isupper(i)
+int _isupper(int i)
 {
 	if (i >= 'A' && i <= 'Z'; i++)
 	{

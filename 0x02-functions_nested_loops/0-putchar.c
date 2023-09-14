@@ -9,13 +9,14 @@
  */
 int _pputchar(void)
 {
-        const char *message = "_putchar\n";
-        write(1, message, strlen(message));
-        return (0);
+	const char *message = "_putchar\n";
+	
+	write(1, message, strlen(message));
+	return (0);
 }
 
 
-int main (void)
+int main(void)
 {
 	_pputchar();
 	return (0);

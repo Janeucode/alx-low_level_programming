@@ -7,7 +7,7 @@
  *
  * Return: always 0 (success)
  */
-int _print(void)
+int print(void)
 {
 	const char *message = "_putchar\n";i
 	write(1, message, strlen(message));

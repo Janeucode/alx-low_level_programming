@@ -7,11 +7,16 @@
  *
  * Return: always 0 (success)
  */
+/**
+ * print -Entry point
+ *
+ * Return: always 0 (success)
+ */
 int print(void)
 {
 	const char *message = "_putchar\n";
+	
 	write(1, message, strlen(message));
-
 	return (0);
 }
 

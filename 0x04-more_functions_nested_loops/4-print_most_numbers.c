@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_numbers - Entry point
+ * print_most_numbers - Entry point
  * Description: print numbers ranging from 0 - 9
  * Return - 0 if sucessful
  */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	char i;
 

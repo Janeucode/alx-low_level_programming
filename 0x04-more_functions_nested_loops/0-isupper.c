@@ -32,8 +32,8 @@ int main(void)
 	char i;
 
 	i = 'A';
-	printf("%i: %d\n", i, _isupper(i));
+	printf("'%c': %d\n", i, _isupper(i));
 	i = 'a';
-	printf("%i: %d\n", i, _isupper(i));
+	printf("'%c': %d\n", i, _isupper(i));
 	return (0);
 }

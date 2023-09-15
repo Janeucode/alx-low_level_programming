@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 /**
  * _isupper - this function checks if letters are in uper case
  * @i: the character to be checked (ASCII value)
@@ -21,7 +22,22 @@ int _isupper(int i)
 		return (2);
 	}
 }
-#include <stdio.h>
+
+
+
+/**
+ * _putchar -this function prints characters
+ *
+ * Return: always 0 (success)
+ */
+int _putchar(char i)
+{
+	write(1, &i, 1);
+	return (0);
+}
+
+
+
 /**
  * main - Entry point
  *
@@ -32,8 +48,18 @@ int main(void)
 	char i;
 
 	i = 'A';
-	printf("%c: %d\n", i, _isupper(i));
-	i = 'a';
-	printf("%c: %d\n", i, _isupper(i));
+	 _putchar(i);
+	 _putchar(':');
+	 _putchar(' ');
+	 _putchar(_isupper(i) + '0');
+	 _putchar('\n');
+
+	 i = 'a';
+	 _putchar(i);
+	 _putchar(':');
+	 _putchar(' ');
+	 _putchar(_isupper(i) + '0');
+	_putchar('\n');
+
 	return (0);
 }

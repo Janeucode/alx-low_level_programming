@@ -1,8 +1,8 @@
 #include "main.h"
 /**_isdigit - checks for digits
  * @c: hold number
- * Description: for checking if numbers are present
- * Return: 1 is number is present otherwise
+ * Description: for checking if numbers are present, use put char to print
+ * Return: 1 if number is present otherwise 0
  */
 
 int _isdigit(int c)

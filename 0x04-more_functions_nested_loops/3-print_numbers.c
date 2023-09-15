@@ -1,7 +1,6 @@
 #include "main.h"
 /**
  * print_numbers - Entry point
- * @i: holds numbers to be printed
  * Description: print numbers ranging from 0 - 9
  * Return - 0 if sucessful
  */

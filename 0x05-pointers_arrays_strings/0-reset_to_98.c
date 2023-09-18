@@ -2,7 +2,7 @@
 /**
  * reset_to_98 -  Entry point
  * @n: take point to an int n
- * Description:  takes a pointer to an int as parameter and updates the value it points to to 98
+ * Description:  takes a pointer as parameter and updates to points to 98
  * Return: 0
  */
 void reset_to_98(int *n)

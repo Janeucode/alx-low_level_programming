@@ -4,7 +4,7 @@
  * @str: given string
  * Return: void
  */
-void _puts(char *str)
+void _puts2(char *str)
 {
 	int len = 0;
 	int i;

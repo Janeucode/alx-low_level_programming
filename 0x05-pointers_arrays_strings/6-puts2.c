@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _puts - Entry point
+ * puts2 - Entry point
  * @str: given string
  * Return: void
  */
-void _puts2(char *str)
+void puts2(char *str)
 {
 	int len = 0;
 	int i;

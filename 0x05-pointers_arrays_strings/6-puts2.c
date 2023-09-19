@@ -15,7 +15,7 @@ void puts2(char *str)
 	}
 	for (i = 0; i < len; i++)
 	{
-		if (i != 1)
+		if (i != 1 && i != 3 && i != 5 && i != 7 && i != 9 )
 			_putchar(str[i]);
 	}
 	_putchar('\n');

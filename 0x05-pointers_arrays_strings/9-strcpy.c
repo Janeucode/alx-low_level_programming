@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * _strcpy - entry point
- *
+ * @dest: buffer point
+ * @src: pointer
  * Return: char
  */
 char *_strcpy(char *dest, char *src)
@@ -14,5 +15,5 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return dest;
+	return (dest);
 }

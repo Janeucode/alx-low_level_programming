@@ -10,10 +10,9 @@
 int main(void)
 {
 	int i;
+	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 
 	srand((unsigned int)time(NULL));
-	const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 	int charset_size = sizeof(charset) - 1;
 	printf("Generated Password: ");
 	for (i = 0; i < PASSWORD_LENGTH; i++)
@@ -25,4 +24,3 @@ int main(void)
 	printf("\n");
 	return (0);
 }
-

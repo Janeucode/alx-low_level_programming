@@ -1,10 +1,11 @@
 #include "main.h"
 /**
  * _strcat - Entry point
- *
- * Return - char
+ * @dest: naham
+ * @src: pick one
+ * Return: char
  */
-char _strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int dest_len = 0;
 	int src_len = 0;
@@ -20,5 +21,5 @@ char _strcat(char *dest, char *src)
 		src_len++;
 	}
 	dest[dest_len] = '\0';
-	return (dest)
+	return (dest);
 }

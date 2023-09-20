@@ -1,7 +1,8 @@
 #include "main.h"
 /**
  * _atio - Entry point
- *
+ * Description: na hm sabi
+ * @_atoi: na hinm know
  * Return - 0
  */
 int _atoi(char *s)
@@ -26,5 +27,5 @@ int _atoi(char *s)
 
 		s++;
 	}
-	return result * sign;
+	return (result * sign);
 }

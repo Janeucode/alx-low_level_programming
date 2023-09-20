@@ -1,10 +1,12 @@
 #include "main.h"
 /**
  * _strncat - Entry point
- *
+ * @dest: fill am
+ * @scr: source string
+ * @n: number of elements
  * Return: char
  */
-char _strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int dest_len = 0;
 	int i;

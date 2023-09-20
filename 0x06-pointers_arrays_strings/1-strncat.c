@@ -2,7 +2,7 @@
 /**
  * _strncat - Entry point
  * @dest: fill am
- * @scr: source string
+ * @src: source string
  * @n: number of elements
  * Return: char
  */
@@ -21,5 +21,5 @@ char *_strncat(char *dest, char *src, int n)
 		dest_len++;
 	}
 	dest[dest_len] = '\0';
-	return dest;
+	return (dest);
 }

@@ -11,6 +11,16 @@
  *
  * Return: A pointer to the result, or 0 if the result cannot be stored in r.
  */
+int is_valid_input(const char *str)
+{
+	for (int i = 0; str[i] != '\0'; i++)
+	{
+        	if (!isdigit(str[i]) || (i == 0 && str[i] == '-'))
+			return 0; // Invalid input
+	
+	}
+	return (1);
+}
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int len1 = strlen(n1);
@@ -18,6 +28,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int carry = 0;
 	int i, j, k;
 
+	if (!is_valid_input(n1) || !is_valid_input(n2))
+		return (0);
 	if (len1 + 2 > size_r || len2 + 2 > size_r)
 		return (0);
 	i = len1 - 1;

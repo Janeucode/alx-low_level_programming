@@ -3,6 +3,22 @@
 #include <stdlib.h>
 #include <string.h>
 /**
+ * is_valid_input - Add two numbers represented as strings
+ * @str: nahman
+ * Return: A pointer to the result, or 0 if the result cannot be stored in r.
+ */
+int is_valid_input(const char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (!isdigit(str[i]) || (i == 0 && str[i] == '-'))
+			return (0);
+	}
+	return (1);
+}
+/**
  * infinite_add - Add two numbers represented as strings
  * @n1: The first number as a string
  * @n2: The second number as a string
@@ -11,16 +27,6 @@
  *
  * Return: A pointer to the result, or 0 if the result cannot be stored in r.
  */
-int is_valid_input(const char *str)
-{
-	for (int i = 0; str[i] != '\0'; i++)
-	{
-        	if (!isdigit(str[i]) || (i == 0 && str[i] == '-'))
-			return 0; // Invalid input
-	
-	}
-	return (1);
-}
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int len1 = strlen(n1);
@@ -37,7 +43,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	k = 0;
 
 	r[size_r - 1] = '\0';
-
 	while (i >= 0 || j >= 0 || carry)
 	{
 		int digit1 = (i >= 0) ? n1[i] - '0' : 0;
@@ -52,14 +57,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		k++;
 		i--;
 		j--;
-
 	}
 	for (i = 0, j = k - 1; i < j; i++, j--)
 	{
 		char temp = r[i];
 
 		r[i] = r[j];
-
 		r[j] = temp;
 
 	}

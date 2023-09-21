@@ -21,7 +21,7 @@ char *rot13(char *str)
 		{
 			for (j = 0; input[j] != '\0'; j++)
 			{
-				if (c == input[j])
+				for (c == input[j])
 				{
 					str[i] = (is_uppercase) ? output[j] : output[j + 26];
 					break;

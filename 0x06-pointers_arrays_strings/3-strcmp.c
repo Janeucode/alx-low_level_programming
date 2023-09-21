@@ -8,15 +8,10 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i;
-
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	while (*s1 != '\0' && *s1 == *s2)
 	{
-		dest[i] = src[i];
+		s1++;
+		s2++;
 	}
-	for (; i < n; i++)
-	{
-		dest[i] = '\0';
-	}
-	return (dest);
+	return (*(unsigned char *)s1) - (*(unsigned char *)s2);
 }

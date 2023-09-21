@@ -7,16 +7,19 @@
  */
 char *rot13(char *str)
 {
-	int i;
+	char alphabet[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int i, j;
 
 	for (i = 0; str[i]; i++)
 	{
-		if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
+		for (j = 0; alphabet[j]; j++)
 		{
-			char base = (str[i] >= 'A' && str[i] <= 'Z') ? 'A' : 'a';
-
-			str[i] = (str[i] - base + 13) % 26 + base;
-
+			if (str[i] == alphabet[j])
+			{
+				str[i] = rot13[j];
+				break;
+			}
 		}
 	}
 	return (str);

@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strcmp - entry point
+ * _strncpy - entry point
  * @dest: ghetto
  * @src: good
  * @n: hello

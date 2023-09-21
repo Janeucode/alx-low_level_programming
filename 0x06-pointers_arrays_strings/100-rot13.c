@@ -7,26 +7,16 @@
  */
 char *rot13(char *str)
 {
-	char *input = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char *output = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int i, j;
+	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; str[i]; i++)
 	{
-		char c = str[i];
-		char is_uppercase = (c >= 'A' && c <= 'Z') ? 1 : 0;
-		char is_lowercase = (c >= 'a' && c <= 'z') ? 1 : 0;
-
-		if (is_uppercase || is_lowercase)
+		if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
 		{
-			for (j = 0; input[j] != '\0'; j++)
-			{
-				for (c == input[j])
-				{
-					str[i] = (is_uppercase) ? output[j] : output[j + 26];
-					break;
-				}
-			}
+			char base = (str[i] >= 'A' && str[i] <= 'Z') ? 'A' : 'a';
+
+			str[i] = (str[i] - base + 13) % 26 + base;
+
 		}
 	}
 	return (str);

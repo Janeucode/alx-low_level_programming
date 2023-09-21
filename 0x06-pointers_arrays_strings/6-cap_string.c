@@ -30,17 +30,22 @@ bool is_separator(char c)
 char *cap_string(char *str)
 {
 	int i = 0;
+	int capitalize_next = 1;
 
 	while (str[i] != '\0')
 	{
 		if (is_separator(str[i]))
 		{
-			i++;
-			continue;
+			capitalize_next = 1;
 		}
-		if (str[i] >= 'a' && str[i] <= 'z')
+		else if (capitalize_next && str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] - ('a' - 'A');
+			capitalize_next = 0;
+		}
+		else
+		{
+			capitalize_next = 0;
 		}
 		i++;
 	}

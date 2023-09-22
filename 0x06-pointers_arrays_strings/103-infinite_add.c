@@ -3,22 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * is_valid_input - Add two numbers represented as strings
- * @str: nahman
- * Return: A pointer to the result, or 0 if the result cannot be stored in r.
- */
-int is_valid_input(const char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		if (!isdigit(str[i]) || (i == 0 && str[i] == '-'))
-			return (0);
-	}
-	return (1);
-}
-/**
  * infinite_add - Add two numbers represented as strings
  * @n1: The first number as a string
  * @n2: The second number as a string

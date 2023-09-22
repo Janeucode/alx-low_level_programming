@@ -1,5 +1,19 @@
 #include "main.h"
 /**
+ * hex_digit - Convert a decimal number to a hexadecimal digit as a character
+ * @num: The decimal number to be converted
+ * Return: The hexadecimal digit as a character
+ */
+char hex_digit(int num)
+{
+	if (num >= 0 && num <= 9)
+		return ('0' + num);
+	else if (num >= 10 && num <= 15)
+		return ('a' + (num - 10));
+	else
+		return ('?');
+}
+/**
  * print_buffer - Print the content of a buffer
  * @b: The buffer to be printed
  * @size: The number of bytes to print
@@ -46,19 +60,4 @@ void print_buffer(char *b, int size)
 	}
 	_putchar('\n');
 	}
-}
-
-/**
- * hex_digit - Convert a decimal number to a hexadecimal digit as a character
- * @num: The decimal number to be converted
- * Return: The hexadecimal digit as a character
- */
-char hex_digit(int num)
-{
-	if (num >= 0 && num <= 9)
-		return ('0' + num);
-	else if (num >= 10 && num <= 15)
-		return ('a' + (num - 10));
-	else
-		return ('?');
 }

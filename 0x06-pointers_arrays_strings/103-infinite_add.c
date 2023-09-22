@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * infinite_add - Add two numbers represented as strings
  * @n1: The first number as a string

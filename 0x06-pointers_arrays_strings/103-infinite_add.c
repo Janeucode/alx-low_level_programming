@@ -13,16 +13,12 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len1 = strlen(n1);
 	int len2 = strlen(n2);
 	int carry = 0;
-	int i, j, k;
+	int i = len1 - 1;
+	int j = len2 - 1;
+	int k = 0;
 
-	if (!is_valid_input(n1) || !is_valid_input(n2))
+	if (size_r <= len1 || size_r <= len2)
 		return (0);
-	if (len1 + 2 > size_r || len2 + 2 > size_r)
-		return (0);
-	i = len1 - 1;
-	j = len2 - 1;
-	k = 0;
-
 	r[size_r - 1] = '\0';
 	while (i >= 0 || j >= 0 || carry)
 	{

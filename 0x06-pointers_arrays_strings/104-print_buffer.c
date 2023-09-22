@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 /**
  * hex_digit - Convert a decimal number to a hexadecimal digit as a character
  * @num: The decimal number to be converted
@@ -12,6 +13,16 @@ char hex_digit(int num)
 		return ('a' + (num - 10));
 	else
 		return ('?');
+}
+/**
+ * _putchar - Write a character to the standard output (stdout).
+ * @c: The character to be written.
+ *
+ * Return: On success, 1 is returned. On error, -1 is returned.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
 /**
  * print_buffer - Print the content of a buffer

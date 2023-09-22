@@ -22,43 +22,50 @@ char hex_digit(int num)
 void print_buffer(char *b, int size)
 {
 	int i, j;
+	char hex_chars[] = "0123456789abcdef";
 
 	if (size <= 0)
 	{
-		_putchar('\n');
+		write(STDOUT_FILENO, "\n", 1);
 		return;
 	}
 	for (i = 0; i < size; i += 10)
 	{
-		_putchar(hex_digit((i >> 24) & 0xFF));
-		_putchar(hex_digit((i >> 16) & 0xFF));
-		_putchar(hex_digit((i >> 8) & 0xFF));
-		_putchar(hex_digit(i & 0xFF));
-		_putchar(':');
-		_putchar(' ');
+		char hex_line[50];
+		char ascii_line[10];
 
-	for (j = 0; j < 10; j++)
-	{
-		if (i + j < size)
+		sprintf(hex_line, "%08x: ", i);
+
+		for (j = 0; j < 10; j++)
 		{
-			_putchar(hex_digit((b[i + j] >> 4) & 0xF));
-			_putchar(hex_digit(b[i + j] & 0xF));
-		}
+			if (i + j < size)
+			{
+				unsigned char byte = b[i + j];
+
+				hex_line[j * 3] = hex_chars[byte >> 4];
+				hex_line[j * 3 + 1] = hex_chars[byte & 0x0F];
+				hex_line[j * 3 + 2] = ' ';
+
+				if (byte >= ' ' && byte <= '~')
+					ascii_line[j] = byte;
+				else
+					ascii_line[j] = '.';
+			}
 		else
 		{
-			_putchar(' ');
-			_putchar(' ');
+			hex_line[j * 3] = ' ';
+			hex_line[j * 3 + 1] = ' ';
+			hex_line[j * 3 + 2] = ' ';
+			ascii_line[j] = ' ';
 		}
-		if (j % 2 == 1)
-			_putchar(' ');
 	}
-	for (j = 0; j < 10; j++)
-	{
-		if (i + j < size && (b[i + j] >= ' ' && b[i + j] <= '~'))
-			_putchar(b[i + j]);
-		else
-			_putchar('.');
-	}
-	_putchar('\n');
+
+	hex_line[30] = ' ';
+	hex_line[31] = '|';
+	hex_line[32] = ' ';
+
+	write(STDOUT_FILENO, hex_line, 34);
+	write(STDOUT_FILENO, ascii_line, 10);
+	write(STDOUT_FILENO, "\n", 1);
 	}
 }

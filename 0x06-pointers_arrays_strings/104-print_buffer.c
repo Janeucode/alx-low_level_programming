@@ -45,7 +45,7 @@ void print_buffer(char *b, int size)
 
 				hex_line[j * 3] = hex_chars[byte >> 4];
 				hex_line[j * 3 + 1] = hex_chars[byte & 0x0F];
-				hex_line[j * 3 + 2] = ' ';
+				hex_line[j * 3 + 2] = (j % 2 == 1) ? ' ' : '\0';
 
 				if (byte >= ' ' && byte <= '~')
 					ascii_line[j] = byte;

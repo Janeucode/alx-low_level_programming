@@ -23,50 +23,38 @@ char hex_digit(int num)
 void print_buffer(char *b, int size)
 {
 	int i, j;
-	char hex_chars[] = "0123456789abcdef";
 
 	if (size <= 0)
 	{
-		write(STDOUT_FILENO, "\n", 1);
+		printf("\n");
 		return;
 	}
 	for (i = 0; i < size; i += 10)
 	{
-		char hex_line[50];
-		char ascii_line[10];
-
-		sprintf(hex_line, "%08x: ", i);
-
+		printf("%08x: ", i);
 		for (j = 0; j < 10; j++)
 		{
 			if (i + j < size)
 			{
-				unsigned char byte = b[i + j];
-
-				hex_line[j * 3] = hex_chars[byte >> 4];
-				hex_line[j * 3 + 1] = hex_chars[byte & 0x0F];
-				hex_line[j * 3 + 2] = (j % 2 == 1) ? ' ' : '\0';
-
-				if (byte >= ' ' && byte <= '~')
-					ascii_line[j] = byte;
-				else
-					ascii_line[j] = '.';
+				printf("%02x%02x", b[i + j], b[i + j + 1]);
+				if (j % 2 == 1)
+					printf(" ");
 			}
 		else
+			printf("    ");
+	}
+	printf(" ");
+
+	for (j = 0; j < 10; j++)
+	{
+		if (i + j < size)
 		{
-			hex_line[j * 3] = ' ';
-			hex_line[j * 3 + 1] = ' ';
-			hex_line[j * 3 + 2] = ' ';
-			ascii_line[j] = ' ';
+			if (b[i + j] >= ' ' && b[i + j] <= '~')
+				printf("%c", b[i + j]);
+			else
+				printf(".");
 		}
 	}
-
-	hex_line[30] = ' ';
-	hex_line[31] = '|';
-	hex_line[32] = ' ';
-
-	write(STDOUT_FILENO, hex_line, 34);
-	write(STDOUT_FILENO, ascii_line, 10);
-	write(STDOUT_FILENO, "\n", 1);
+	printf("\n");
 	}
 }

@@ -36,8 +36,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i--;
 		j--;
 	}
-	if (k >= size_r - 1)
+	if (carry > 0 && k >= size_r - 1)
 		return (0);
+	if (carry > 0)
+	{
+		r[k] = carry + '0';
+		k++;
+	}
 	for (i = 0, j = k - 1; i < j; i++, j--)
 	{
 		char temp = r[i];

@@ -36,15 +36,13 @@ void print_buffer(char *b, int size)
 		{
 			if (i + j < size)
 			{
-				printf("%02x%02x", b[i + j], b[i + j + 1]);
+				printf("%02x", (unsigned char)b[i + j]);
 				if (j % 2 == 1)
 					printf(" ");
 			}
 		else
 			printf("    ");
 	}
-	printf(" ");
-
 	for (j = 0; j < 10; j++)
 	{
 		if (i + j < size)

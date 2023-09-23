@@ -11,12 +11,9 @@
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int len1 = strlen(n1);
-	int len2 = strlen(n2);
+	int len1 = strlen(n1), len2 = strlen(n2);
 	int carry = 0;
-	int i = len1 - 1;
-	int j = len2 - 1;
-	int k = 0;
+	int i = len1 - 1, j = len2 - 1, k = 0;
 
 	if (size_r <= len1 || size_r <= len2 + 1)
 		return (0);
@@ -49,7 +46,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 
 		r[i] = r[j];
 		r[j] = temp;
-
 	}
 	return (r);
 }

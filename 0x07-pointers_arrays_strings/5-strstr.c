@@ -2,7 +2,7 @@
 #define NULL ((void *)0)
 /**
  * _strstr - Entry point
- * @haystach; to be located
+ * @haystack: to be located
  * @needle:warrants search
  * Description: locates a substring
  * Return: char or NULL

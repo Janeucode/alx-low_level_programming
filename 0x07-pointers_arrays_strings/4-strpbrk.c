@@ -1,13 +1,14 @@
 #include "main.h"
 #define NULL ((void *)0)
 /**
- * _strpbrk: Searches for the first occurrence of any character in accept
+ * _strpbrk - locates first occurrence in string of any of the byte
  * Description: search for occurence of character in string
  * @s: string
  * @accept: second string
  * Return: char
  */
 char *_strpbrk(char *s, char *accept)
+/* this function searches for occurence of a character */
 {
 	char *a;
 

@@ -12,6 +12,10 @@ void print_diagsums(int *a, int size)
 	int sum1 = 0;
 	int sum2 = 0;
 	int digit;
+	int digits1[10];
+	int digits2[10];
+	int digit1_count = 0;
+	int digit2_count = 0;
 
 	for (i = 0; i < size; i++)
 	{

@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * free_grind - Entry point
+ * free_grid - Entry point
  * @grid: the grid
  * @height: how tall
  * Description: naso

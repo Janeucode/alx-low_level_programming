@@ -1,5 +1,6 @@
 #define NULL ((void *)0)
 #include "main.h"
+#include <stdlib.h>
 /**
  * argstostr - Entry point
  * @ac: first

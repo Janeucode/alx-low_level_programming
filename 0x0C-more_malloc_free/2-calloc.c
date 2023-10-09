@@ -1,5 +1,6 @@
 #include "main.h"
 #define NULL ((void *)0)
+#include <string.h>
 #include <stdlib.h>
 /**
  * _calloc - Entry point

@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #define NULL ((void *)0)
 /**
- * string_nooncat - Entry point
+ * string_nconcat - Entry point
  * @s1: first str
  * @s2: second str
  * @n: number of strings

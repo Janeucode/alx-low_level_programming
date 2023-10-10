@@ -1,5 +1,5 @@
 /**
- * dog - Entry point
+ * struct dog - Entry point
  * @name: name of animal
  * @age: age of animal
  * @owner: who bought the dog

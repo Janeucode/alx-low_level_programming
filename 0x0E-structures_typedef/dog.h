@@ -1,3 +1,5 @@
+#ifndef MY_HEADER_H
+#define MY_HEADER_H
 /**
  * struct dog - Entry point
  * @name: name of animal
@@ -12,3 +14,4 @@ struct dog
 	float age;
 	char *owner;
 };
+#endif

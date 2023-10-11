@@ -1,4 +1,5 @@
 #include "dog.h"
+#include "string.h"
 #define NULL ((void *)0)
 #include <stdlib.h>
 /**

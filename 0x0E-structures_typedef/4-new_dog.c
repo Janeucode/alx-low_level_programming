@@ -2,12 +2,12 @@
 #define NULL ((void *)0)
 #include <stdlib.h>
 /**
- * new_dog: Entry point
+ * new_dog - Entry point
  * @name: name
  * @age: age
  * @owner: na ham
  * Description: new dog
- * Return:
+ * Return: not known
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -29,5 +29,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	return new_dog;
+	return (new_dog);
 }

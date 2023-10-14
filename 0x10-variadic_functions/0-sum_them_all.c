@@ -1,5 +1,9 @@
 #include "variadic_functions.h"
-#include <stdarg.h>
+#define VA_START(args, last_arg)   ((args) = (va_list)&(last_arg) + sizeof(last_arg))
+#define VA_ARG(args, type)         (*(type*)((args) += sizeof(type), (args) - sizeof(type)))
+#define VA_END(args)               ((void)(args))
+
+typedef char* va_list;
 /**
  * sum_them_all - Entry point
  * @n: number

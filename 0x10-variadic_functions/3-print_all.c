@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include "variadic_functions.h"
 #define NULL ((void *)0)
 #include <stdio.h>
 /**

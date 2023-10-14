@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#define NULL ((void *)0)
 #include "variadic_functions.h"
 /**
  * print_numbers - Entry point

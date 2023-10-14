@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 /**
  * print_numbers - Entry point
- * @seperator: seperate
+ * @separator: seperate
  * @n: number
  * Description: to doo
  * Return: void

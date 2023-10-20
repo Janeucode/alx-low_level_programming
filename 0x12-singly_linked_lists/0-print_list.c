@@ -1,9 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-typedef list_s{
-	char *str;
-	struct list_s *next;
-} list_t;
+#include "lists.h"
 /**
  * print_list - Entry point
  * @h: contents
@@ -23,5 +20,5 @@ size_t print_list(const list_t *h)
 		count++;
 		h = h->next;
 	}
-	return count;
+	return (count);
 }

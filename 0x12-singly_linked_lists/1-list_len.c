@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <stddef.h>
+#define NULL ((void *)0)
 /**
  * list_len - Entry point
  * @h: content

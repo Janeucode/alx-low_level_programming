@@ -8,7 +8,7 @@
  * @str: address
  * Description: add new node
  * Return: list_t
- */:
+ */
 list_t *add_node(list_t **head, const char *str)
 {
 	if (str == NULL)

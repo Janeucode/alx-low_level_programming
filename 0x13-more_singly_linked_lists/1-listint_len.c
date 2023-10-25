@@ -1,5 +1,6 @@
 #include "lists.h"
 #define NULL ((void *)0)
+#include <stddef.h>
 /**
  * listint_len - Entry point
  * @h: input

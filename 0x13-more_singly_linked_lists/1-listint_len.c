@@ -1,4 +1,5 @@
 #include "lists.h"
+#define NULL ((void *)0)
 /**
  * listint_len - Entry point
  * @h: input
@@ -9,10 +10,10 @@ size_t listint_len(const listint_t *h)
 {
 	size_t count = 0;
 
-	while(h != 0)
+	while (h != NULL)
 	{
-		h->next;
-		count++:
+		h = h->next;
+		count++;
 	}
 	return (count);
 }

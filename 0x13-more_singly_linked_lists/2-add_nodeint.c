@@ -7,7 +7,7 @@
  * Description: add new node
  * @head: first node
  * @n: number of node
- * Return; listint_t
+ * Return: listint_t
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {

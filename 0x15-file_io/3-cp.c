@@ -8,6 +8,13 @@
 
 #define BUFFER_SIZE 1024
 
+/**
+ * main - Entry point
+ * @argc: first arg
+ * @argv: second arg
+ * Description: mix two args
+ * Return: int
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 3)
@@ -18,6 +25,14 @@ int main(int argc, char *argv[])
 	copy_file(argv[1], argv[2]);
 	return (0);
 }
+
+/**
+ * copy_file - Entry point
+ * @file_from: first file
+ * @file_to: second file
+ * Description: copy file
+ * Return: void
+ */
 void copy_file(const char *file_from, const char *file_to)
 {
 	int fd_from, fd_to;
@@ -25,7 +40,6 @@ void copy_file(const char *file_from, const char *file_to)
 	char buffer[BUFFER_SIZE];
 
 	fd_from = open(file_from, O_RDONLY);
-
 	if (fd_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
@@ -40,7 +54,6 @@ void copy_file(const char *file_from, const char *file_to)
 	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
-
 		if (bytes_written == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);

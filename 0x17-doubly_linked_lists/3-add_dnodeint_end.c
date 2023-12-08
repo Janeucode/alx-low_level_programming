@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * add_dnodeint - Entry point
+ * add_dnodeint_end - Entry point
  * @head: head
  * @n: new element
  * Description: add element to tail
@@ -14,7 +14,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new = malloc(sizeof(dlistint_t));
 
 	if (new == NULL)
-		return NULL;
+		return (NULL);
 
 	new->n = n;
 	new->next = NULL;
@@ -23,12 +23,12 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	{
 		new->prev = NULL;
 		*head = new;
-		return new;
+		return (new);
 	}
 	while (last->next != NULL)
 		last = last->next;
 	new->prev = last;
 	last->next = new;
 
-	return new;
+	return (new);
 }

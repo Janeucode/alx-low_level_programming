@@ -1,4 +1,9 @@
-all: school
+school: school.o
+	gcc -o school school.o
 
-school:
-	@echo "gcc main.c school.c -o school"
+school.o: school.c
+	gcc -c school.c
+
+.PHONY: clean
+clean:
+	rm -f school school.o

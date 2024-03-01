@@ -4,10 +4,10 @@ OBJ = $(SRC:.c=.o)
 NAME = school
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -0 $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 $(OBJ): $(SRC)
 	$(CC) -c $< -o $@
 
 .PHONY: all
-all = $(NAME)
+all: $(NAME)
